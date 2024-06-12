@@ -15,19 +15,14 @@
   let
     system = "x86_64-linux";
 
-    nixvim' = nixvim.legacyPackages.${system};
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs
+      = nixpkgs.legacyPackages.${system};
+    nixvim'
+      = nixvim.legacyPackages.${system};
     
     mod = {
+      module = import ./config;
       inherit pkgs;
-
-      module = {
-
-      };
-
-      extraSpecialArgs = {
-
-      };
     };
 
     vim =
