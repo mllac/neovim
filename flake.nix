@@ -8,7 +8,6 @@
 
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -22,7 +21,9 @@
     mod = {
       inherit pkgs;
 
-      module = import ./config;
+      module = {
+
+      };
 
       extraSpecialArgs = {
 
@@ -32,7 +33,7 @@
     vim =
       nixvim'.makeNixvimWithModule mod;
   in {
-    packages = {
+    packages.${system} = {
       default = vim;
     };
   };
