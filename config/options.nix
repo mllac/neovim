@@ -3,10 +3,7 @@
 
   globalOpts = {
     relativenumber = true;
-    termguicolors = true;
-    
-    # TAB // INDENT
-    
+    termguicolors = true;   
     smartindent = true;
     signcolumn = "yes";
     ignorecase = true;
@@ -18,8 +15,7 @@
     wrap = false;
     tabstop = 2;
     list = true;
-
-    # LIST CHARS
+    nu = true;
 
     listchars = {
       precedes = "«";
