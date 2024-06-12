@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { nixvim, nixpkgs, ... }: 
+  outputs = { nixvim, nixpkgs, ... }:
   let
     system = "x86_64-linux";
 

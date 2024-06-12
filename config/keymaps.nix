@@ -1,11 +1,13 @@
 { ... }: {
   keymaps = [
+    # EX
+
     {
       key = "<leader>pv";
       mode = "n";
 
       action = ''
-        <cmd>Ex<cmd>
+        <cmd>Ex<cr>
       '';
     }
   ];
