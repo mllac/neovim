@@ -11,5 +11,13 @@
       '';
     }
 
+    {
+      key = "<leader>f";
+      mode = "n";
+
+      action = ''
+        <cmd>!cargo fmt<cr>
+      '';
+    }
   ];
 }
