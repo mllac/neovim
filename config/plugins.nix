@@ -67,6 +67,10 @@
           enable = true;
         };
 
+        elixirls = {
+          enable = true;
+        };
+
         nixd = {
           enable = true;
         };
