@@ -11,12 +11,6 @@
         ];
 
         mapping = {
-          "<CR>" = ''
-            cmp.mapping(cmp.mapping.select_next_item(), {
-                'i',
-                's',
-            })
-          '';
           "<Tab>" = ''
             cmp.mapping.confirm({ select = true })
           '';
@@ -64,6 +58,10 @@
           installCargo = true;
           installRustc = true;
 
+          enable = true;
+        };
+
+        tsserver = {
           enable = true;
         };
 
