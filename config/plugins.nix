@@ -1,4 +1,15 @@
-{ ... }: {
+{ pkgs, ... }: {
+  extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
+    name = "vimwiki";
+
+    src = pkgs.fetchFromGitHub {
+      hash = "sha256-K82iqA5IBNUn/IfaDV5AJzcupffY+ye9SfSe10x3Pl0";
+      rev = "v2024.01.24";
+      owner = "vimwiki";
+      repo = "vimwiki";
+    };
+  })];
+
   plugins = {
     cmp = {
       enable = true;
