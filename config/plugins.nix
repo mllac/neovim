@@ -107,7 +107,7 @@
   };
 
   colorschemes = {
-    kanagawa = {
+    vscode = {
       enable = true;
     };
   };
