@@ -22,6 +22,12 @@
         ];
 
         mapping = {
+          "j" = ''
+            cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})
+          '';
+          "k" = ''
+            cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})
+          '';
           "<Tab>" = ''
           cmp.mapping(function(callback)
             if cmp.visible() then
@@ -37,7 +43,7 @@
               callback()
             end
           end, {"i", "s", "c"})
-          ''; 
+          '';
           "<C-u>" = ''
             cmp.mapping.scroll_docs(-4)
           '';
@@ -83,6 +89,13 @@
     lsp = {
       enable = true;
 
+      keymaps = {
+        diagnostic = {
+          "]d" = "goto_next";
+          "[d" = "goto_prev";
+        };
+      };
+
       servers = {
         rust-analyzer = {
           installCargo = true;
@@ -103,10 +116,6 @@
           enable = true;
         };
       };
-    };
-
-    trouble = {
-      enable = true;
     };
   };
 
