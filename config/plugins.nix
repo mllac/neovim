@@ -104,11 +104,35 @@
           enable = true;
         };
 
+        lua-ls = {
+          enable = true;
+        };
+
+        yamlls = {
+          enable = true;
+        };
+
         tsserver = {
           enable = true;
         };
 
         elixirls = {
+          enable = true;
+        };
+
+        cssls = {
+          enable = true;
+        };
+
+        jsonls = {
+          enable = true;
+        };
+
+        htmx = {
+          enable = true;
+        };
+
+        html = {
           enable = true;
         };
 
