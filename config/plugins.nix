@@ -120,7 +120,7 @@
   };
 
   colorschemes = {
-    vscode = {
+    rose-pine = {
       enable = true;
     };
   };
