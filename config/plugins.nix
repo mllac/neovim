@@ -104,6 +104,10 @@
         };
       };
     };
+
+    trouble = {
+      enable = true;
+    };
   };
 
   colorschemes = {
