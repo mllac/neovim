@@ -22,10 +22,10 @@
         ];
 
         mapping = {
-          "j" = ''
+          "jj" = ''
             cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})
           '';
-          "k" = ''
+          "kk" = ''
             cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})
           '';
           "<Tab>" = ''
@@ -120,7 +120,7 @@
   };
 
   colorschemes = {
-    rose-pine = {
+    catppuccin = {
       enable = true;
     };
   };

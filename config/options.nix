@@ -3,7 +3,7 @@
 
   globalOpts = {
     relativenumber = true;
-    termguicolors = true;   
+    termguicolors = true;
     smartindent = true;
     signcolumn = "yes";
     ignorecase = true;
