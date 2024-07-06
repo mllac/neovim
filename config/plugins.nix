@@ -78,6 +78,10 @@
       };
     };
 
+    dockerls = {
+      enable = true;
+    };
+
     nix = {
       enable = true;
     };
