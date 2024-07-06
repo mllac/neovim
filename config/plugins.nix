@@ -78,10 +78,6 @@
       };
     };
 
-    dockerls = {
-      enable = true;
-    };
-
     nix = {
       enable = true;
     };
@@ -105,6 +101,10 @@
           installCargo = true;
           installRustc = true;
 
+          enable = true;
+        };
+
+        dockerls = {
           enable = true;
         };
 
