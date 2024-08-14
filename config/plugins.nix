@@ -110,6 +110,11 @@
 
         lua-ls = {
           enable = true;
+
+          filetypes = [
+            "lua"
+            "luau"
+          ];
         };
 
         yamlls = {
