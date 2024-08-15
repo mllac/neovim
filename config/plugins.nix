@@ -8,22 +8,9 @@
       owner = "vimwiki";
       repo = "vimwiki";
     };
-  })]
-  ++ [
-    (pkgs.vimUtils.buildVimPlugin {
-      pname = "luau-lsp.nvim";
-      version = "1.5.0";
+  })]; 
 
-      src = pkgs.fetchFromGitHub {
-        hash = "sha256-K82iqA5IBNUn/IfaDV5AJzcupffY+ye9SfSe10x3Pl0";
-        repo = "luau-lsp.nvim";
-        owner = "lopi-py";
-        rev = "2b312aa";
-      };
-    })
-  ];
-
-  extraConfigLua = ''
+  extraConfigLuaPost = ''
   require("luau-lsp").setup {
     platform = {
       type = "roblox",
