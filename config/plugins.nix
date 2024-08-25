@@ -1,5 +1,6 @@
 { pkgs, ... }: {
-  extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
     name = "vimwiki";
 
     src = pkgs.fetchFromGitHub {
@@ -8,7 +9,30 @@
       owner = "vimwiki";
       repo = "vimwiki";
     };
-  })]; 
+    })
+    (pkgs.vimUtils.buildVimPlugin {
+      pname = "luau-lsp.nvim";
+      version = "1.5.0";
+
+      src = pkgs.fetchFromGitHub {
+        hash = "sha256-mWMijz3LI+N/JmHV5m0yZrjWEOlGGb1SgL923YaCBA8=";
+        repo = "luau-lsp.nvim";
+        owner = "lopi-py";
+        rev = "2b312aa";
+      };
+    }) 
+    (pkgs.vimUtils.buildVimPlugin {
+      pname = "plenary.nvim";
+      version = "0.1.4-1";
+
+      src = pkgs.fetchFromGitHub {
+        hash = "sha256-s561tW5YaNQ8q7zRen1hYNrYIbh+KguBHOuSR29yzOY=";
+        repo = "plenary.nvim";
+        owner = "nvim-lua";
+        rev = "f97a076";
+      };
+    }) 
+  ];
 
   extraConfigLuaPost = ''
   require("luau-lsp").setup {
