@@ -146,8 +146,6 @@
 
       servers = {
         rust-analyzer = {
-          rustcPackage = fenix.packages."x86_64-linux".complete.toolchain;
-
           installCargo = true;
           installRustc = true;
 
