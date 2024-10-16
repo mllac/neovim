@@ -12,51 +12,7 @@
       repo = "vimwiki";
     };
     })
-    (pkgs.vimUtils.buildVimPlugin {
-      pname = "luau-lsp.nvim";
-      version = "1.5.0";
-
-      src = pkgs.fetchFromGitHub {
-        hash = "sha256-mWMijz3LI+N/JmHV5m0yZrjWEOlGGb1SgL923YaCBA8=";
-        repo = "luau-lsp.nvim";
-        owner = "lopi-py";
-        rev = "2b312aa";
-      };
-    }) 
-    (pkgs.vimUtils.buildVimPlugin {
-      pname = "plenary.nvim";
-      version = "0.1.4-1";
-
-      src = pkgs.fetchFromGitHub {
-        hash = "sha256-s561tW5YaNQ8q7zRen1hYNrYIbh+KguBHOuSR29yzOY=";
-        repo = "plenary.nvim";
-        owner = "nvim-lua";
-        rev = "f97a076";
-      };
-    }) 
   ];
-
-  extraConfigLuaPost = ''
-  require("luau-lsp").setup {
-    platform = {
-      type = "roblox",
-    },
-    types = {
-      roblox_security_level = "PluginSecurity",
-    },
-    sourcemap = {
-      rojo_project_file = "default.project.json",
-      autogenerate = true,
-      enabled = true,
-    },
-    fflags = {
-      sync = true,
-      override = {
-        LuauTarjanChildLimit = 0,
-      },
-    },
-  }
-  '';
 
   plugins = {
     cmp = {
@@ -145,7 +101,7 @@
       };
 
       servers = {
-        rust-analyzer = {
+        rust_analyzer = {
           installCargo = true;
           installRustc = true;
 
@@ -156,7 +112,7 @@
           enable = true;
         };
 
-        lua-ls = {
+        lua_ls = {
           enable = true;
         };
 
@@ -164,7 +120,7 @@
           enable = true;
         };
 
-        tsserver = {
+        ts_ls = {
           enable = true;
         };
 
@@ -195,9 +151,5 @@
     };
   };
 
-  colorschemes = {
-    catppuccin = {
-      enable = true;
-    };
-  };
+  colorschemes.rose-pine.enable = true;
 }

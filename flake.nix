@@ -6,16 +6,12 @@
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
 
-    fenix = {
-      url = "github:nix-community/fenix";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
     };
   };
 
-  outputs = { nixvim, nixpkgs, fenix, ... }:
+  outputs = { nixvim, nixpkgs, ... }:
   let
     system = "x86_64-linux";
 
@@ -26,10 +22,6 @@
     
     mod = {
       module = import ./config;
-
-      extraSpecialArgs = {
-        fenix = fenix;
-      };
 
       inherit pkgs;
     };
