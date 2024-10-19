@@ -18,9 +18,7 @@
     system = "x86_64-linux";
 
     pkgs
-      = nixpkgs.legacyPackages.${system};
-    a_pkgs
-      = nixpkgs.legacyPackages.${android};
+    = nixpkgs.legacyPackages.${system};
 
     a_nixvim'
       = nixvim.legacyPackages.${android};
@@ -34,10 +32,12 @@
       inherit pkgs;
     };
 
-    a_mod = {
+    a_mod = let
+      pkgs = nixpkgs.legacyPackages.${android};
+    in {
       module = import ./config;
 
-      inherit a_pkgs;
+      inherit pkgs;
     };
 
     a_vim =
