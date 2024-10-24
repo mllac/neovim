@@ -120,10 +120,6 @@
           enable = true;
         };
 
-        ts_ls = {
-          enable = true;
-        };
-
         elixirls = {
           enable = true;
         };
