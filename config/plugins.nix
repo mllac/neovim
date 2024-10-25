@@ -147,5 +147,5 @@
     };
   };
 
-  colorschemes.rose-pine.enable = true;
+  colorschemes.vscode.enable = true;
 }
